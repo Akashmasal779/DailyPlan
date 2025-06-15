@@ -1,34 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DailyPlan</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fef9f8, #f4f9ff);
+      color: #333;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      animation: fadeSlideDown 1s ease;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      color: #1e88e5;
+      animation: bounce 1.5s infinite alternate;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: #555;
+      margin-top: 10px;
+      animation: slideIn 1s ease;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 0;
+      animation: zoomIn 1s ease;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .card h2 {
+      color: #1e88e5;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .card i {
+      font-size: 2rem;
+      color: #f57c00;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #999;
+      animation: fadeSlideUp 1s ease;
+    }
+
+    /* Animations */
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeSlideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeSlideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
 </head>
 <body>
-  <header class="fade-slide-down">
-    <h1 class="logo bounce">📅 DailyPlan</h1>
-    <p class="tagline slide-in">Organize Your Day, Your Way</p>
+
+  <header>
+    <h1 class="logo">📅 DailyPlan</h1>
+    <p class="tagline">Organize Your Day, Your Way</p>
   </header>
 
-  <section class="cards-container zoom-in">
-    <div class="card hover-glow">
-      <h2 class="flip">Tasks</h2>
-      <p>List your tasks for the day.</p>
+  <section class="cards-container">
+    <div class="card">
+      <i class="fas fa-check-circle"></i>
+      <h2>Tasks</h2>
+      <p>Create and manage your to-do list for better productivity.</p>
     </div>
-    <div class="card hover-glow">
-      <h2 class="flip">Goals</h2>
-      <p>Set small daily goals to achieve.</p>
+    <div class="card">
+      <i class="fas fa-bullseye"></i>
+      <h2>Goals</h2>
+      <p>Define and track daily goals to stay focused and motivated.</p>
     </div>
-    <div class="card hover-glow">
-      <h2 class="flip">Time Blocks</h2>
-      <p>Divide your day into productive blocks.</p>
+    <div class="card">
+      <i class="fas fa-clock"></i>
+      <h2>Time Blocks</h2>
+      <p>Plan your day in blocks to manage time effectively.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-notes-medical"></i>
+      <h2>Notes</h2>
+      <p>Jot down ideas, reminders, or thoughts instantly.</p>
     </div>
   </section>
 
-  <footer class="fade-slide-up">
+  <footer>
     <p>© 2025 DailyPlan • Built with 💙 by Akash</p>
   </footer>
+
 </body>
 </html>
