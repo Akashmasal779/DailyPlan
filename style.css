@@ -16,7 +16,7 @@ body {
 /* ==== HEADER ==== */
 header {
   text-align: center;
-  padding: 40px 20px 20px;
+  padding: 440px 230px 230px;
   animation: fadeSlideDown 1s ease;
 }
 
@@ -29,7 +29,7 @@ header {
 .tagline {
   font-size: 1.2rem;
   color: #555;
-  margin-top: 10px;
+  margin-top: 110px;
   animation: slideIn 1s ease;
 }
 
@@ -37,8 +37,8 @@ header {
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 40px 0;
+  gap: 203px;
+  padding: 430px 0;
   animation: zoomIn 1s ease;
 }
 
@@ -66,7 +66,7 @@ header {
 .card i {
   font-size: 2rem;
   color: #f57c00;
-  margin-bottom: 10px;
+  margin-bottom: 101px;
 }
 
 .card p {
