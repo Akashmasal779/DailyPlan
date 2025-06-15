@@ -1,0 +1,107 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #fff);
+  color: #333;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 30px 10px;
+  animation: fadeSlideDown 1s ease-out;
+}
+
+.logo {
+  font-size: 3rem;
+  color: #0d47a1;
+  animation: bounce 1.5s infinite alternate;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+  animation: slideIn 1.2s ease-out;
+}
+
+/* Cards */
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px auto;
+  gap: 20px;
+  max-width: 1000px;
+  animation: zoomIn 1.2s ease;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 30%;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transition: 0.3s;
+  animation: flipIn 1s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  animation: glow 2s infinite;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px;
+  font-size: 0.9rem;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ddd;
+  animation: fadeSlideUp 1.5s ease;
+}
+
+/* Animations */
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-8px); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes flipIn {
+  from { transform: rotateY(90deg); opacity: 0; }
+  to { transform: rotateY(0deg); opacity: 1; }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px #42a5f5; }
+  50% { box-shadow: 0 0 20px #1976d2; }
+  100% { box-shadow: 0 0 5px #42a5f5; }
+}
